@@ -1,20 +1,18 @@
 {% block content %}
-    <h1>{% block title %} Add a New Post {% endblock %}</h1>
+    <h1>{% block title %} Add a New Player {% endblock %}</h1>
     <form method="post">
-        <label for="title">Title</label>
+        <label>Player Name: </label>
         <br>
-        <input type="text" name="title"
-               placeholder="Post title"
-               value="{{ request.form['title'] }}"></input>
+        <input type="text" name="name"
+               placeholder="Player Name"
+               value="{{ request.form['name'] }}">
         <br>
 
-        <label for="content">Post Content</label>
+        <label>Team name: </label>
         <br>
-        <textarea name="content"
-                  placeholder="Post content"
-                  rows="15"
-                  cols="60"
-                  >{{ request.form['content'] }}</textarea>
+        <input type="text" name="team"
+               placeholder="Player Team"
+               value="{{ request.form['team'] }}">
         <br>
         <button type="submit">Submit</button>
     </form>
